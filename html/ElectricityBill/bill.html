@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ElectricityBill</title>
+</head>
+<body>
+	<form>
+		Select category:
+		<select id="category" size="1">
+			<option value="RGP">RGP</option>
+			<option value="BPL">BPL</option>
+			<option value="GPL">GPL</option>
+			<option value="Non-RGP">Non-RGP</option>
+			<option value="LTP-AG">LTP-AG</option>
+		</select><br/><br/>
+		Enter Unit:
+		<input type="number" id="units"/>
+		<input type="button" value="Get Amount" onclick="displayBill(units.value)"/>
+	</form>
+<script type="text/javascript" src="calculate.js"></script>
+</body>
+</html>
