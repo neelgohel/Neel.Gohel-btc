@@ -1,23 +1,22 @@
 class Anagram
-  @@input=''
+  @input = ''
   def initialize(inp)
-    @@input=inp
+    @input = inp
   end
 
   def match(listinp)
-    output=[]
+    output = []
     return output if @input==''
-    wordx=@@input.downcase
+    wordx = @@input.downcase
     word1=wordx.split('')
     word1.sort_by!{ |m| m.downcase }
     listinp.each do |word2|
-      word=word2
-      word2=word2.downcase
-      word2=word2.split('')
-      word2=word2.sort_by!{ |m| m.downcase }
+      word = word2
+      word2 = word2.downcase
+      word2 = word2.split('')
+      word2 = word2.sort_by!{ |m| m.downcase }
       if word1==word2 && wordx!=word.downcase
        output.push(word)
-
       end
     end
     return output
