@@ -1,17 +1,12 @@
 class Robot
-
   ALPHA_ARRAY = ('A'.."Z").to_a
-
-
   def initialize
-    @roboname=''
-    @roboname=ALPHA_ARRAY.shuffle.first + ALPHA_ARRAY.shuffle.first + Time.now.nsec.to_s[-3..-1]
+    @roboname = ''
+    @roboname = ALPHA_ARRAY.shuffle.first + ALPHA_ARRAY.shuffle.first + Time.now.nsec.to_s[-3..-1]
   end
-
   def name
-    return @roboname
+    @roboname
   end
-
   def reset
     initialize
   end
