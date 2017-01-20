@@ -7,7 +7,7 @@ class Anagram
   def match(listinp)
     output = []
     return output if @input==''
-    wordx = @@input.downcase
+    wordx = @input.downcase
     word1=wordx.split('')
     word1.sort_by!{ |m| m.downcase }
     listinp.each do |word2|
