@@ -7,7 +7,7 @@ class Grains
       grains_count[g] = x
       x *= 2
     end
-    @total_grains=0
+    @total_grains = 0
     grains_count.each do |count|
       @total_grains += count
     end
